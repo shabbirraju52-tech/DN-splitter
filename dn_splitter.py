@@ -64,7 +64,7 @@ def ocr_page(page):
     w, h = img.size
     crop = img.crop((int(w*0.52), 0, w, int(h*0.43)))
     crop = preprocess(crop)
-    text = pytesseract.image_to_string(crop, config="--psm 6", lang="eng+Arabic")
+    text = pytesseract.image_to_string(crop, config="--psm 6", lang="eng+Ara")
     return normalize_text(text), img
 
 
